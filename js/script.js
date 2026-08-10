@@ -1,5 +1,9 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const today = new Date().getDay();
+const todayRow = document.querySelector(`.hours-list li[data-day="${today}"]`);
+if (todayRow) todayRow.classList.add('is-today');
+
 const header = document.querySelector('.site-header');
 const burger = document.getElementById('burger');
 

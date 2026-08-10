@@ -179,6 +179,22 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .contact-list a:hover{ text-decoration:underline; }
 
+.hours-list{ margin-top:.4rem; }
+.hours-list li{
+  display:flex; justify-content:space-between; gap:1rem;
+  padding:.4rem 0; border-bottom:1px dotted var(--cream-2); font-size:.92rem;
+}
+.hours-list li:last-child{ border-bottom:none; }
+.hours-day{ color:var(--ink); }
+.hours-time{ color:#4c4038; font-weight:500; }
+.hours-time.closed{ color:var(--muted); font-style:italic; font-weight:400; }
+.hours-list li.is-today{ position:relative; padding-left:.9rem; }
+.hours-list li.is-today::before{
+  content:""; position:absolute; left:-.1rem; top:50%; translate:0 -50%;
+  width:6px; height:6px; border-radius:50%; background:var(--brown);
+}
+.hours-list li.is-today .hours-day{ color:var(--brown-dark); font-weight:600; }
+
 /* Footer */
 .site-footer{ background:var(--brown-dark); color:var(--cream); padding:2.5rem 0; }
 .footer-inner{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
