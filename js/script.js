@@ -1,3 +1,9 @@
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (window.location.hash) {
+  window.scrollTo(0, 0);
+  history.replaceState(null, document.title, window.location.pathname + window.location.search);
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const today = new Date().getDay();
