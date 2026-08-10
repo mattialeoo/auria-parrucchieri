@@ -19,6 +19,19 @@ document.querySelectorAll('.nav a').forEach(link => {
   });
 });
 
+const slideshow = document.getElementById('slideshow');
+if (slideshow) {
+  const slides = slideshow.querySelectorAll('.slide');
+  let current = 0;
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
+    }, 3500);
+  }
+}
+
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealItems.length) {
   const observer = new IntersectionObserver((entries) => {
