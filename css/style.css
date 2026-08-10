@@ -233,6 +233,7 @@ ul{ margin:0; padding:0; list-style:none; }
   .site-header.open .nav-cta{ text-align:center; }
   .split, .split-reverse{ grid-template-columns:1fr; }
   .split-reverse .split-media, .split-reverse .split-text{ order:initial; }
+  #chi-siamo .split-media{ display:none; }
   .services-grid{ grid-template-columns:1fr; }
   .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
 }
